@@ -77,3 +77,11 @@ TcpServer::TcpServer(quint16 port, QObject* parent)
 }
 
 TcpServer::~TcpServer() = default;
+
+void TcpServer::closeConnection()
+{
+    if (p_->clientConnection) {
+        p_->clientConnection->close();
+    }
+
+}

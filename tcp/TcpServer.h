@@ -24,6 +24,9 @@ signals:
     /// Indicates that a command has been received from the client.
     void commandReceived();
 
+protected:
+    void closeConnection();
+
 private:
     /// Virtual m
     virtual void processCommand(const QString& message) = 0;
